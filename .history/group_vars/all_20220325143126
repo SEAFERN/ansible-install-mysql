@@ -1,0 +1,7 @@
+db_user: medium_post
+db_pass: mebium123
+db_name: medium_db
+
+db_user: vagrant
+db_pass: vagrant
+db_name: 

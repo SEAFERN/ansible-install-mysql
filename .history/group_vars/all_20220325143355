@@ -1,3 +1,3 @@
 db_user: vagrant
 db_pass: vagrant
-db_name: lobsters
+db_name:

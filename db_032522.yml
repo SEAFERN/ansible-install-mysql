@@ -20,22 +20,15 @@
         state: started
         enabled: yes
 
-    - name: creating mysql user (vagrant)
+    - name: creating mysql user (medium_post)
       mysql_user:
         name: "{{db_user}}"
-        #password: "{{db_pass}}"
-        # priv: "*.*:ALL"
-        priv: "*.*:ALL,GRANT"
-        host: "{{item}}"
-        #host: "%"
+        password: "{{db_pass}}"
+        priv: "*.*:ALL"
+        host: "%"
         state: present
-      with_items:
-        #- "{{ ansible_hostname }}"
-        - 127.0.0.1
-        - ::1
-        - localhost
 
-    - name: creating db
+    - name: creating medium_db
       mysql_db:
         name: "{{db_name}}"
         state: present
